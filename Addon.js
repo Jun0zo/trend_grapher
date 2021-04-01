@@ -198,7 +198,7 @@ module.exports = {
         console.log('click_ratio : ', device, click_ratio_json.results[0].data);
         console.log('click_total : ', device, click_total); 
 
-        var click_per_ratio = click_total / click_ratio_json.results[0].data[12]['ratio'];
+        var click_per_ratio = click_total / click_ratio_json.results[0].data[11]['ratio'];
         console.log('click_per_ratio : ' , click_per_ratio);
         var click_trend = [];
         for(var i=0; i<12; i++)

@@ -4,7 +4,8 @@ var fs = require('fs');
 const asyncify = require('express-asyncify')
 const app     = asyncify(express());
 const path    = require('path');
-const Addon = require('./Addon2');
+const Addon = require('./Addon');
+const port = 3333
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -55,10 +56,6 @@ app.get('/keytool', async(req, res) => {
     }
 });
 
-async function Main(keyword, res){
-    
-}
-
-var server = app.listen(4000, function(){
+var server = app.listen(port, function(){
     console.log("Running...!!");
 })
